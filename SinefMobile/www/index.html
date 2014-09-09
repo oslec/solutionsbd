@@ -27,29 +27,21 @@
 <link rel="stylesheet" type="text/css" href="css/index.css" />
 <title>Sinef Mobile</title>
 <script type="text/javascript">
-	function onBodyLoad() {
+	document.addEventListener("deviceready", onDeviceReady, false);
 
-		//document.addEventListener("deviceready", onDeviceReady, false);
-		navigator.app.loadUrl("https://ww2.fumec.br/sinefmobile/", {openExternal : false});
-	}
-	
-	function onDeviceReady()
-	{
-		// do your thing!
-		//navigator.notification.alert("PhoneGap is working")
-	}
+    function onDeviceReady() {
+         window.open('https://ww2.fumec.br/sinefmobile/', '_blank', 'location=no');
+    }
+
 </script>
 </head>
 <body onload="onBodyLoad()">
 	<div class="app">
-		<h1>Sinef Mobile</h1>
-		
 	</div>
 	<script type="text/javascript" src="phonegap.js"></script>
 	<script type="text/javascript" src="js/index.js"></script>
 	<script type="text/javascript">
 		app.initialize();
-		
 	</script>
 </body>
 </html>
